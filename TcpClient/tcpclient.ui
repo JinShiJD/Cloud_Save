@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TcpClient</class>
+ <widget class="QWidget" name="TcpClient">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>417</width>
+    <height>611</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TcpClient</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QCheckBox {
+    padding-left: 20px;           /* 增加左边距，确保文字和圆形按钮之间有空间 */
+    padding-right: 10px;          /* 可以根据需要调整右边距 */
+}
+
+QCheckBox::indicator {
+    width: 20px;                  /* 设置圆形复选框的大小 */
+    height: 20px;
+    border: 2px solid #3498db;    /* 设置圆形边框颜色 */
+    border-radius: 12px;          /* 设置圆角，确保复选框是圆形 */
+    background-color: white;      /* 设置背景颜色 */
+    margin-right: 4px;           /* 设置复选框和文字之间的间距 */
+}
+
+QCheckBox::indicator:checked {
+    background-color: #3498db;    /* 设置选中时的背景颜色 */
+    border: 2px solid #3498db;    /* 设置选中时的边框颜色 */
+}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_5">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="head_Img">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>19</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    background-color: #f0f0f0;
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::AutoText</enum>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="FileType.qrc">:/map/def_head.jpg</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLineEdit" name="name_le">
+           <property name="styleSheet">
+            <string notr="true">border-radius: 10px; /* 设置圆角半径 */
+border: 2px solid transparent; /* 设置边框颜色和宽度 */
+padding: 5px; /* 设置内边距 */
+</string>
+           </property>
+           <property name="placeholderText">
+            <string>Please Input Your Username</string>
+           </property>
+           <property name="cursorMoveStyle">
+            <enum>Qt::VisualMoveStyle</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="pwd_le">
+           <property name="styleSheet">
+            <string notr="true">border-radius: 10px; /* 设置圆角半径 */
+border: 2px solid transparent; /* 设置边框颜色和宽度 */
+padding: 5px; /* 设置内边距 */
+</string>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+           <property name="placeholderText">
+            <string>Please Input Your Password</string>
+           </property>
+           <property name="cursorMoveStyle">
+            <enum>Qt::LogicalMoveStyle</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <spacer name="horizontalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="disp_pb">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>显示密码</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QPushButton" name="login_pb">
+         <property name="font">
+          <font>
+           <family>Arial Narrow</family>
+           <pointsize>18</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 15px; /* 设置圆角半径 */
+border: 2px solid transparent; /* 设置边框颜色和宽度 */
+padding: 5px; /* 设置内边距 */
+background-color:#87CEEB;
+color:white;
+</string>
+         </property>
+         <property name="text">
+          <string>Login</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="regist_pb">
+           <property name="font">
+            <font>
+             <family>Arial Narrow</family>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius: 20px; /* 设置圆角半径 */
+border: 2px solid transparent; /* 设置边框颜色和宽度 */
+padding: 5px; /* 设置内边距 */
+background-color:#87CEEB;
+color:white;</string>
+           </property>
+           <property name="text">
+            <string>Regist</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>128</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="logout_pb">
+           <property name="font">
+            <font>
+             <family>Arial Narrow</family>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius: 20px; /* 设置圆角半径 */
+border: 2px solid transparent; /* 设置边框颜色和宽度 */
+padding: 5px; /* 设置内边距 */
+background-color:#87CEEB;
+color:white;</string>
+           </property>
+           <property name="text">
+            <string>Logout</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="FileType.qrc"/>
+ </resources>
+ <connections/>
+</ui>
